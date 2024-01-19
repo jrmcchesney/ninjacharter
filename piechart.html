@@ -1,0 +1,166 @@
+<h1 align="center">Make Pie Chart</h1><br>
+
+ <div class="container-fluid">
+  
+  	<div class="row">
+          
+    	  <div class="col-sm-4">
+				  <div class="field form-group">
+				    <label for="title">Title</label>
+					<input id="title"  type="text"  class="form-control" />
+					
+				  </div>
+		  </div>
+		  
+		  
+	</div>
+	<div class= "row">
+          <div class="col-sm-6">
+				  <div class="field form-group">
+				    <label for="title">xdata</label>
+					<input id="xdata"  type="text"  class="form-control" />
+					
+				  </div>
+          </div>
+          <div class="col-sm-6">
+				  <div class="field form-group ">
+				    <label for="title">ydata</label>
+					<input id="ydata"  type="text"  class="form-control" />
+					
+				  </div>
+          </div>
+    </div>
+    <div class="row">
+    	  
+          <div class="col-sm-6">  
+				  <div class="field form-group ">
+					<label for="title">Description</label>
+					
+					<textarea id="description" class="form-control"></textarea>
+				  </div>
+          </div>
+          
+    </div>
+    
+</div>
+<br>
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-sm-3">
+				<button onclick="MakePieChart()" class="btn btn-primary"  style='width:100%'  >View Chart To Review</button>
+		</div>
+		
+	    
+		<div class="col-sm-2">
+				<button id="refresh", class="btn btn-primary">Latex Refresh</button>
+		</div>
+        
+    </div>
+
+
+
+		<br>
+		<br>
+		<div class="row">
+						  <div class="col-sm-8">
+									<div align="left"  style="height: 644px;border: solid black;">
+									   <div align="center" id="plotly-div"></div>
+									</div>
+						  </div>
+						  <div class="col-sm-4">
+									<div align="left"   style="height: 650px;padding: 5px;">
+													<h6 id="demo"></h6>
+									</div>
+						  </div>
+			</div>
+		<br>
+  
+</div>
+
+
+
+
+ 
+ 
+ <script>
+ 
+ $(document).on('click', '#refresh', function() {
+      if (window.MathJax) {
+
+							MathJax.Hub.Queue(
+									["Typeset",MathJax.Hub]	
+							);
+
+	  }	
+});
+        
+        var range  = [];
+	    var domain = [];
+        		
+
+		var rangeInput  = document.getElementById("ydata");
+		var domainInput = document.getElementById("xdata");
+		
+		var titleInput = document.getElementById("title");
+		var descriptInput = document.getElementById("description");
+
+		
+
+		
+		
+
+	function MakePieChart() {
+	
+	
+			  domain = (domainInput.value).split(";");
+		      range = (rangeInput.value).split(";").map(parseFloat);
+		      title = (titleInput.value);
+              description = (descriptInput.value);
+			  
+			  var data = [{
+				  values: range,
+				  labels: domain,
+				  textinfo: "label+percent+value",
+				  hoverinfo: "label+value",
+				  type: 'pie'
+				}];
+
+				var layout = {title: title, titlefont: {size: 26},
+				  height: 600,
+				  
+				  showlegend: true,
+	                          legend: {"orientation": "h",x:0,y:1.1},
+				};
+
+
+		
+
+				Plotly.newPlot('plotly-div', data, layout);
+				document.getElementById("demo").innerHTML =  'Editable Text Area ' +'<br>'+'<br>' +  '<div contenteditable="true" style="height:597px;border: solid black;">'+description+'</textarea>';
+		        
+      if (window.MathJax) {
+
+							MathJax.Hub.Queue(
+									["Typeset",MathJax.Hub]	
+							);
+
+	  }	
+
+	}
+		
+		
+		
+			
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
