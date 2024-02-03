@@ -25,9 +25,9 @@
 
 
 
-<h1 align="center">Make Box Whisker Chart</h1><br>
 
-<div class="container-fluid" style="padding: 40px;">
+
+<div class="container-fluid" style="padding: 7px;">
     <div class="row">
     		 <div class="col-sm-3">
 					  <div class="field form-group">
@@ -72,7 +72,7 @@
    	        
 			<div class="col-sm-2">	  
 					  <div class="field form-group">
-					    
+					    <label>Boxpoint</label>
                         <select id="boxpoint" class="form-control"><option value="all">on</option><option value="none">off</option></select>
                                             
 						
@@ -92,7 +92,13 @@
                                             
 					   </div>
             </div>
-            
+            <div class="col-sm-6">
+                       <div class="field form-group">
+						
+						<textarea id="description" class="form-control"></textarea>
+
+					  </div>
+			 </div>
 					  
      </div>
      
@@ -101,14 +107,16 @@
 
 
 
-<div class="container-fluid" style="padding: 40px;">
+<div class="container-fluid" style="padding: 7px;">
 		<div class="row">
 			<div class="col-sm-3">
 					<button onclick="MakeBoxChart()" class="btn btn-primary" style='width:100%'>View Boxplot To Review</button>
 			</div>
 		
 			
-			
+			<div class="col-sm-2">
+				<button id="refresh", class="btn btn-primary">Latex Refresh</button>
+			</div>
 		
 		
 		</div>
@@ -123,7 +131,11 @@
 									   <div align="center" id="plotly-div"></div>
 									</div>
 				  </div>
-				 
+				  <div class="col-sm-4">
+									<div align="left"   style="height: 650px;padding: 5px;">
+													<h6 id="demo"></h6>
+									</div>
+				  </div>
 	</div>
 
 </div>
@@ -149,7 +161,7 @@ $(document).on('click', '#refresh', function() {
         var xdata = [];
         var xdata2 = [];
         var dtickInput = document.getElementById("dtick");
-       
+        var descriptInput = document.getElementById("description");
         var titleInput  = document.getElementById("title");
 		var xdataInput = document.getElementById("xdata");
 		var xdata2Input = document.getElementById("xdata2");
@@ -163,7 +175,7 @@ $(document).on('click', '#refresh', function() {
 function MakeBoxChart() {
        
        
-                     
+                     description = descriptInput.value;
                      title = (titleInput.value);
                      dtick = (dtickInput.value);
 					 xdata = (xdataInput.value).split(';');
