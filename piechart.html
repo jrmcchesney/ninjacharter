@@ -28,7 +28,7 @@
 
 <h1 align="center">Make Pie Chart</h1><br>
 
- <div class="container-fluid">
+ <div class="container-fluid" style="padding: 50px;">
   
   	<div class="row">
           
@@ -83,7 +83,7 @@
 				<button id="refresh", class="btn btn-primary">Latex Refresh</button>
 		</div>
         
-    </div>
+</div>
 
 
 
@@ -95,12 +95,8 @@
 									   <div align="center" id="plotly-div"></div>
 									</div>
 						  </div>
-						  <div class="col-sm-4">
-									<div align="left"   style="height: 650px;padding: 5px;">
-													<h6 id="demo"></h6>
-									</div>
-						  </div>
-			</div>
+						 
+		</div>
 		<br>
   
 </div>
@@ -165,8 +161,7 @@
 		
 
 				Plotly.newPlot('plotly-div', data, layout);
-				document.getElementById("demo").innerHTML =  'Editable Text Area ' +'<br>'+'<br>' +  '<div contenteditable="true" style="height:597px;border: solid black;">'+description+'</textarea>';
-		        
+				
       if (window.MathJax) {
 
 							MathJax.Hub.Queue(
