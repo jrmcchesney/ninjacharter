@@ -207,13 +207,12 @@ function MakeBoxChart() {
 									dtick: dtick,
 									
 									gridwidth: 2},
-					  height:600
+					  height:500
 					  
 					};
 
 					Plotly.newPlot('plotly-div', data, layout);
-					document.getElementById("demo").innerHTML =  'Editable Text Area ' +'<br>'+'<br>' +  '<div contenteditable="true" style="height:597px;border: solid black;">'+description+'</textarea>';
-		 
+					
       if (window.MathJax) {
 
 							MathJax.Hub.Queue(
