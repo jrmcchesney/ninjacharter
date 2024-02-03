@@ -58,17 +58,7 @@
 				  </div>
           </div>
     </div>
-    <div class="row">
-    	  
-          <div class="col-sm-6">  
-				  <div class="field form-group ">
-					<label for="title">Description</label>
-					
-					<textarea id="description" class="form-control"></textarea>
-				  </div>
-          </div>
-          
-    </div>
+   
     
 </div>
 <br>
@@ -142,13 +132,13 @@
 			  var data = [{
 				  values: range,
 				  labels: domain,
-				  textinfo: "label+percent+value",
-				  hoverinfo: "label+value",
+				  textinfo: "label+percent",
+				  hoverinfo: "label",
 				  type: 'pie'
 				}];
 
 				var layout = {title: title, titlefont: {size: 26},
-				  height: 600,
+				  height: 500,
 				  
 				  showlegend: true,
 	                          legend: {"orientation": "h",x:0,y:1.1},
