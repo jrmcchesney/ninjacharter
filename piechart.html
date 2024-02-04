@@ -40,6 +40,14 @@
 					
 				  </div>
 		  </div>
+		  <div class="col-sm-2">
+					  <div class="field form-group">
+                           
+                                            <label>Option1</label>
+                                            <select id="optionline1" class="form-control"><option value="label+percent">Percent</option><option value="label+percent+value">Percent and Value</option></select>
+                                            
+                     </div>
+          </div>
 		  
 		  
 	</div>
@@ -113,6 +121,7 @@
 
 		var rangeInput  = document.getElementById("ydata");
 		var domainInput = document.getElementById("xdata");
+		var option1Input = document.getElementById("optionline1");
 		
 		var titleInput = document.getElementById("title");
 		var descriptInput = document.getElementById("description");
@@ -128,11 +137,11 @@
 			  domain = (domainInput.value).split(";");
 		      range = (rangeInput.value).split(";").map(parseFloat);
 		      title = (titleInput.value);
-             
+              option1 = (option1Input.value);
 			  var data = [{
 				  values: range,
 				  labels: domain,
-				  textinfo: "label+percent+value",
+				  textinfo: option1,
 				  hoverinfo: "label",
 				  type: 'pie'
 				}];
