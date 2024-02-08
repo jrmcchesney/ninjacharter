@@ -1,0 +1,238 @@
+
+  
+<div class="container-fluid">
+  
+		<div class="row">
+				<div class="col-sm-4">
+						
+							  <div class="field form-group">
+							    <%= label_tag "Title"  %>
+					            <input id="title"  type="text"  class="form-control" />
+								
+							  </div>
+						
+				</div>
+				 
+        </div>
+		</div>
+		<div class="row">
+				<div class="col-sm-6">
+
+							  <div class="field form-group">
+							    <%= label_tag "Header"  %>
+					            <input id="header"  type="text"  class="form-control" />
+								
+							  </div>
+                 </div>
+                 <div class="col-sm-6">
+							  <div class="field form-group">
+							    <%= label_tag "Values"  %>
+					            <input id="values"  type="text"  class="form-control" />
+								
+							  </div>
+			     </div>
+		</div>
+		<div class="row">
+			     <div class="col-sm-2">
+			     			  <div class="field form-group">
+			     			    <%= label_tag "Header Font"  %>
+                                <select id="headerfont" class="form-control"><option value="12">12</option><option value="14">14</option><option value="16">16</option><option value="18">18</option><option value="20">20</option><option value="22">22</option><option value="24">24</option></select>
+                                            
+							  </div>
+				 </div>
+				 <div class="col-sm-2">
+			     			  <div class="field form-group">
+			     			    <%= label_tag "Header Color"  %>
+                                <select id="headercolor" class="form-control"><option value="white">white</option><option value="yellow">yellow</option><option value="orange">orange</option><option value="lavender">lavender</option></select>
+                                            
+							  </div>
+				 </div>
+				 <div class="col-sm-2">
+			     			  <div class="field form-group">
+			     			    <%= label_tag "Scatt-Option Line1"  %>
+                                <select id="option" class="form-control"><option value="markers">ScatterPlot</option><option value="lines+markers">LineDotPlot</option><option value="dot">dot</option><option value="lines">JustLinePlot</option><option value="dashdot">dashdot</option></select>
+                                            
+								<%= form.label :column1font %>
+								<%= form.select :column1font, [ ['12','12'],['14','14'],['16','16'],['18','18'],['20','20'],['22','22'],['24','24']],{} ,:id=>"column1font", class: 'form-control'%>
+							  </div>
+				 </div>
+				 <div class="col-sm-2">
+			     			  <div class="field form-group">
+			     			    <%= label_tag "Scatt-Option Line1"  %>
+                                <select id="option" class="form-control"><option value="markers">ScatterPlot</option><option value="lines+markers">LineDotPlot</option><option value="dot">dot</option><option value="lines">JustLinePlot</option><option value="dashdot">dashdot</option></select>
+                                            
+								<%= form.label :column1color %>
+								<%= form.select :column1color,[['white','white'],['yellow','yellow'], ['orange','orange'],['lavender','lavender']] ,{} ,:id=>"column1color", class: 'form-control'%>
+							  </div>
+				 </div>
+				 <div class="col-sm-2">
+			     			  <div class="field form-group">
+			     			    <%= label_tag "Scatt-Option Line1"  %>
+                                <select id="option" class="form-control"><option value="markers">ScatterPlot</option><option value="lines+markers">LineDotPlot</option><option value="dot">dot</option><option value="lines">JustLinePlot</option><option value="dashdot">dashdot</option></select>
+                                            
+								<%= form.label :cellsfont%>
+								<%= form.select :cellsfont,[['12','12'],['14','14'],['16','16'],['18','18'],['20','20'],['22','22'],['24','24']] ,{} ,:id=>"cellsfont", class: 'form-control'%>
+							  </div>
+				 </div>
+				 <div class="col-sm-2">
+			     			  <div class="field form-group">
+			     			    <%= label_tag "Scatt-Option Line1"  %>
+                                <select id="option" class="form-control"><option value="markers">ScatterPlot</option><option value="lines+markers">LineDotPlot</option><option value="dot">dot</option><option value="lines">JustLinePlot</option><option value="dashdot">dashdot</option></select>
+                                            
+								<%= form.label :cellscolor %>
+								<%= form.select :cellscolor,[['white','white'],['yellow','yellow'], ['orange','orange'],['lavender','lavender']] ,{} ,:id=>"cellscolor", class: 'form-control'%>
+							  </div>
+				 </div>
+		</div>
+			     	
+		<div class="row">
+		         <div class="col-sm-6">
+							  <div class="field form-group">
+								<%= form.label :description %>
+								<%= form.text_area :description ,:id=>'description',class: 'form-control'%>
+							  </div>
+				  </div>
+	    </div>
+
+		<div class="row">
+			 <div class="col-sm-6">			  
+
+					  <div class="actions">
+						<%= form.submit("Save Changes to Database", class:'btn btn-success', style:'width:100%' ) %>
+					  </div>
+					<% end %>
+			</div>
+		</div>
+</div>
+
+
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-sm-3">
+				<button onclick="MakeTable()" class="btn btn-primary"  style='width:100%'  >View Table To Review</button>
+		</div>
+		
+	    <div class="col-sm-3">
+			<%= link_to 'Back To Tables', tables_path , class: 'btn btn-warning',  style:'width:100%' %>
+		</div>
+        <div class="col-sm-2">
+				<button id="refresh", class="btn btn-primary">Latex Refresh</button>
+			</div>
+        
+    </div>
+
+
+
+<br>
+<br>
+		<div class="row">
+						  <div class="col-sm-8">
+									<div align="left"  style="height: 644px;border: solid black;">
+									   <div align="center" id="plotly-div"></div>
+									</div>
+						  </div>
+						  <div class="col-sm-4">
+									<div align="left"   style="height: 650px;padding: 5px;">
+													<h6 id="demo"></h6>
+									</div>
+						  </div>
+			</div>
+</div>
+<br>
+
+
+
+<script>
+        $(document).on('click', '#refresh', function() {
+      if (window.MathJax) {
+
+							MathJax.Hub.Queue(
+									["Typeset",MathJax.Hub]	
+							);
+
+	  }	
+});
+        var header  = [];
+        var valArr  = [];
+	    var values = [];
+		
+
+		var headerInput  = document.getElementById("header");
+		var valuesInput = document.getElementById("values");
+		
+		var titleInput = document.getElementById("title");
+        var descriptInput = document.getElementById("description");
+        var headerfontInput = document.getElementById("headerfont");
+		var headercolorInput = document.getElementById("headercolor");
+		var column1fontInput = document.getElementById("column1font");
+		var column1colorInput = document.getElementById("column1color");
+		var cellsfontInput = document.getElementById("cellsfont");
+		var cellscolorInput = document.getElementById("cellscolor");
+		 
+        
+       function MakeTable() {
+					  valArr = (valuesInput.value).split('&');
+					  for(var j =0; j<= valArr.length-1; j++){
+							values[j] = valArr[j].split(';');
+					  }
+					  title = (titleInput.value);
+					  header = (headerInput.value).split(';');
+					  description = (descriptInput.value);
+					  headerfont = (headerfontInput.value);
+					  headercolor = (headercolorInput.value);
+					  column1font = (column1fontInput.value);
+					  column1color = (column1colorInput.value);
+					  cellsfont = (cellsfontInput.value);
+					  cellscolor = (cellscolorInput.value);
+			  
+                     
+                  var data = [{
+					  type: 'table',
+					  header: {
+					    values: header,
+					    height: 35,
+						align: "center",
+						line: {width: 1, color: 'black'},
+						fill: {color: headercolor},
+						font: {family: "Arial", size: headerfont, color: "black"}
+					  },
+					  cells: {
+						values: values,
+						height: 35,
+						align: "center",
+						line: {color: "black", width: 1},
+						fill: {color: [column1color,cellscolor]},
+						font: {family: "Arial", size: [column1font,cellsfont], color: ["black"]}
+					  }
+					}];
+					
+					layout= { height:600,
+					showlegend: true,
+	                          legend: {"orientation": "h",x:0,y:1.1},
+								title: {
+					text: title,
+					font: {
+					  
+					  size: 26
+					}}
+			         };
+					
+					
+
+					Plotly.newPlot('plotly-div', data,layout);
+		            document.getElementById("demo").innerHTML =  'Editable Text Area ' +'<br>'+'<br>' +  '<div contenteditable="true" style="height:597px;border: solid black;">'+description+'</textarea>';
+		 
+      if (window.MathJax) {
+
+							MathJax.Hub.Queue(
+									["Typeset",MathJax.Hub]	
+							);
+
+	  }	
+
+		}				
+		
+</script>
+
+
+

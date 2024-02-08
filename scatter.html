@@ -1,0 +1,1095 @@
+<h1 align="center">Plot some functions</h1>
+<div class="container-fluid">
+				<div class="row">
+					     <div class="col-sm-3"> 
+
+									  <div class="field form-group">
+									
+										<%= label_tag "Title"  %>
+					                    <input id="title"  type="text"  class="form-control" />
+									  </div>
+						 </div>
+						 
+						 <div class="col-sm-2"> 
+
+									  <div class="field form-group">
+									    <%= label_tag "X axis Label"  %>
+					                    <input id="labelx"  type="text"  class="form-control" />
+										
+									  </div>
+						 </div>
+						 <div class="col-sm-2"> 
+
+									  <div class="field form-group">
+										<%= label_tag "Y axis Label"  %>
+					                    <input id="labely"  type="text"  class="form-control" />
+					                  </div>
+						 </div>
+						 <div class="col-sm-1"> 
+
+									  <div class="field form-group">
+										
+									    <%= label_tag "xtype"  %>
+                                        <select id="xtype" class="form-control"><option value=" ">Normal</option><option value="date">Date</option></select>
+                                            
+									  </div>
+						 </div>
+						 
+            </div>
+						
+						 
+			
+                <div class="row">
+					     <div class="col-sm-2"> 
+									  <div class="field form-group">
+										
+									    <%= label_tag "Group1"  %>
+					                    <input id="group1"  type="text"  class="form-control" />
+									  </div>
+						 </div>
+				         <div class="col-sm-3"> 
+									  <div class="field form-group">
+									    <%= label_tag "xdata1"  %>
+					                    <input id="xdata1"  type="text"  class="form-control" />
+										
+									  </div>
+						  </div>
+						
+						  
+                          <div class="col-sm-3"> 
+									  <div class="field from-group">
+									    <%= label_tag "ydata1"  %>
+					                    <input id="ydata1"  type="text"  class="form-control" />
+										
+									  </div>
+						  </div>
+						  
+						  <div class="col-sm-4" style="padding-top: 24px;">
+						  			<button type="button" onclick="myFunction(x='xdata1',y='ydata1')" class="btn btn-primary" >Spaces to ;</button>
+						  			<button type="button" onclick="myFunction2(x='xdata1',y='ydata1')" class="btn btn-primary" >Commas to ;</button>
+						  			<button type="button" onclick="myFunction3(x='xdata1',y='ydata1')" class="btn btn-primary" >Remove ","</button>
+						   </div>		
+						  				
+						  
+				</div>
+				<div class="row">
+					      <div class="col-sm-2"> 
+									  <div class="field form-group">
+										
+									    <%= label_tag "Group2"  %>
+					                    <input id="group2"  type="text"  class="form-control" />
+									  </div>
+						 </div>
+				         <div class="col-sm-3"> 
+									  <div class="field form-group">
+									    <%= label_tag "xdata2"  %>
+					                    <input id="xdata2"  type="text"  class="form-control" />
+										
+									  </div>
+						  </div>
+						
+						  
+                          <div class="col-sm-3"> 
+									  <div class="field from-group">
+									    <%= label_tag "ydata2"  %>
+					                    <input id="ydata2"  type="text"  class="form-control" />
+										
+									  </div>
+						  </div>
+						 
+						  <div class="col-sm-4" style="padding-top: 24px;">
+						  			<button type="button" onclick="myFunction(x='xdata2',y='ydata2')" class="btn btn-primary" >Spaces to ;</button>
+						  			<button type="button" onclick="myFunction2(x='xdata2',y='ydata2')" class="btn btn-primary" >Commas to ;</button>
+						  			<button type="button" onclick="myFunction3(x='xdata2',y='ydata2')" class="btn btn-primary" >Remove ","</button>
+						   </div>		
+                </div>
+                <div class="row">
+					     <div class="col-sm-2"> 
+									  <div class="field form-group">
+										
+									    <%= label_tag "Group3"  %>
+					                    <input id="group3"  type="text"  class="form-control" />
+									  </div>
+						 </div>
+				         <div class="col-sm-3"> 
+									  <div class="field form-group">
+									    <%= label_tag "xdata3"  %>
+					                    <input id="xdata3"  type="text"  class="form-control" />
+										
+									  </div>
+						  </div>
+						
+						  
+                          <div class="col-sm-3"> 
+									  <div class="field from-group">
+									    <%= label_tag "ydata3"  %>
+					                    <input id="ydata3"  type="text"  class="form-control" />
+										
+									  </div>
+						  </div>
+						  
+						  <div class="col-sm-4" style="padding-top: 24px;">
+						  			<button type="button" onclick="myFunction(x='xdata3',y='ydata3')" class="btn btn-primary" >Spaces to ;</button>
+						  			<button type="button" onclick="myFunction2(x='xdata3',y='ydata3')" class="btn btn-primary" >Commas to ;</button>
+						  			<button type="button" onclick="myFunction3(x='xdata3',y='ydata3')" class="btn btn-primary" >Remove ","</button>
+						   </div>		
+                </div>
+                <div class="row">
+					     <div class="col-sm-2"> 
+									  <div class="field form-group">
+										
+									    <%= label_tag "Group4"  %>
+					                    <input id="group4"  type="text"  class="form-control" />
+									  </div>
+						 </div>
+				         <div class="col-sm-3"> 
+									  <div class="field form-group">
+									    <%= label_tag "xdata4"  %>
+					                    <input id="xdata4"  type="text"  class="form-control" />
+										
+									  </div>
+						  </div>
+						
+						  
+                          <div class="col-sm-3"> 
+									  <div class="field from-group">
+									    <%= label_tag "ydata4"  %>
+					                    <input id="ydata4"  type="text"  class="form-control" />
+										
+									  </div>
+						  </div>
+						  
+						  <div class="col-sm-4" style="padding-top: 24px;">
+						  			<button type="button" onclick="myFunction(x='xdata4',y='ydata4')" class="btn btn-primary" >Spaces to ;</button>
+						  			<button type="button" onclick="myFunction2(x='xdata4',y='ydata4')" class="btn btn-primary" >Commas to ;</button>
+						  			<button type="button" onclick="myFunction3(x='xdata4',y='ydata4')" class="btn btn-primary" >Remove ","</button>
+						   </div>		
+						  				
+						  
+				</div>
+				<div class="row">
+					     <div class="col-sm-2"> 
+									  <div class="field form-group">
+										
+									    <%= label_tag "Group5"  %>
+					                    <input id="group5"  type="text"  class="form-control" />
+									  </div>
+						 </div>
+				         <div class="col-sm-3"> 
+									  <div class="field form-group">
+									    <%= label_tag "xdata5"  %>
+					                    <input id="xdata5"  type="text"  class="form-control" />
+										
+									  </div>
+						  </div>
+						
+						  
+                          <div class="col-sm-3"> 
+									  <div class="field from-group">
+									    <%= label_tag "ydata5"  %>
+					                    <input id="ydata5"  type="text"  class="form-control" />
+										
+									  </div>
+						  </div>
+						  
+						  <div class="col-sm-4" style="padding-top: 24px;">
+						  			<button type="button" onclick="myFunction(x='xdata5',y='ydata5')" class="btn btn-primary" >Spaces to ;</button>
+						  			<button type="button" onclick="myFunction2(x='xdata5',y='ydata5')" class="btn btn-primary" >Commas to ;</button>
+						  			<button type="button" onclick="myFunction3(x='xdata5',y='ydata5')" class="btn btn-primary" >Remove ","</button>
+						   </div>		
+						  				
+						  
+				</div>
+				<div class="row">
+					     <div class="col-sm-2"> 
+									  <div class="field form-group">
+										
+									    <%= label_tag "Group6"  %>
+					                    <input id="group6"  type="text"  class="form-control" />
+									  </div>
+						 </div>
+				         <div class="col-sm-3"> 
+									  <div class="field form-group">
+									    <%= label_tag "xdata6"  %>
+					                    <input id="xdata6"  type="text"  class="form-control" />
+										
+									  </div>
+						  </div>
+						
+						  
+                          <div class="col-sm-3"> 
+									  <div class="field from-group">
+									    <%= label_tag "ydata6"  %>
+					                    <input id="ydata6"  type="text"  class="form-control" />
+										
+									  </div>
+						  </div>
+						  
+						  <div class="col-sm-4" style="padding-top: 24px;">
+						  			<button type="button" onclick="myFunction(x='xdata6',y='ydata6')" class="btn btn-primary" >Spaces to ;</button>
+						  			<button type="button" onclick="myFunction2(x='xdata6',y='ydata6')" class="btn btn-primary" >Commas to ;</button>
+						  			<button type="button" onclick="myFunction3(x='xdata6',y='ydata6')" class="btn btn-primary" >Remove ","</button>
+						   </div>		
+						  				
+						  
+				</div>
+                <div class="row">
+					     <div class="col-sm-2">
+									  <div class="field form-group">
+									    <%= label_tag "minx"  %>
+					                    <input id="minx"  type="text"  class="form-control" />
+										
+									  </div>
+						 </div>
+						 <div class="col-sm-2">
+									  <div class="field form-group">
+									    <%= label_tag "maxx"  %>
+					                    <input id="maxx"  type="text"  class="form-control" />
+										
+									  </div>
+						 </div>
+						 <div class="col-sm-2">
+									  <div class="field form-group">
+									    <%= label_tag "miny"  %>
+					                    <input id="miny"  type="text"  class="form-control" />
+										
+									  </div>
+						 </div>
+						 <div class="col-sm-2">
+									  <div class="field form-group">
+									    <%= label_tag "maxy"  %>
+					                    <input id="maxy"  type="text"  class="form-control" />
+										
+									  </div>
+						</div>
+						 <div class="col-sm-2">
+									  <div class="field form-group">
+									    <%= label_tag "xticks"  %>
+					                    <input id="xticks"  type="text"  class="form-control" />
+										
+									  </div>
+						 </div>
+						 <div class="col-sm-2">
+									  <div class="field form-group">
+									    <%= label_tag "yticks"  %>
+					                    <input id="yticks"  type="text"  class="form-control" />
+										
+									  </div>
+                         </div>
+                </div>
+                <div class="row">
+                		  
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "Scatt-Option Line1"  %>
+                                            <select id="option" class="form-control"><option value="markers">ScatterPlot</option><option value="lines+markers">LineDotPlot</option><option value="dot">dot</option><option value="lines">JustLinePlot</option><option value="dashdot">dashdot</option></select>
+                                            
+                                            
+                                      </div>
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "Scatt-Option Line2"  %>
+                                            <select id="option2" class="form-control"><option value="markers">ScatterPlot</option><option value="lines+markers">LineDotPlot</option><option value="dot">dot</option><option value="lines">JustLinePlot</option><option value="dashdot">dashdot</option></select>
+                                            
+                                            
+                                      </div>
+                           </div>
+                           <div class="col-sm-2">
+                           
+                                      <div class="field form-group">
+                                            <%= label_tag "Scatt-Option Line3"  %>
+                                            <select id="option3" class="form-control"><option value="markers">ScatterPlot</option><option value="lines+markers">LineDotPlot</option><option value="dot">dot</option><option value="lines">JustLinePlot</option><option value="dashdot">dashdot</option></select>
+                                            
+                                            
+                                      </div>
+                           </div>
+                           <div class="col-sm-2">
+                           
+                                      <div class="field form-group">
+                                            <%= label_tag "Scatt-Option Line4"  %>
+                                            <select id="option4" class="form-control"><option value="markers">ScatterPlot</option><option value="lines+markers">LineDotPlot</option><option value="dot">dot</option><option value="lines">JustLinePlot</option><option value="dashdot">dashdot</option></select>
+                                            
+                                            
+                                      </div>
+                           </div>
+                           <div class="col-sm-2">
+                           
+                                      <div class="field form-group">
+                                            <%= label_tag "Scatt-Option Line5"  %>
+                                            <select id="option5" class="form-control"><option value="markers">ScatterPlot</option><option value="lines+markers">LineDotPlot</option><option value="dot">dot</option><option value="lines">JustLinePlot</option><option value="dashdot">dashdot</option></select>
+                                            
+                                            
+                                      </div>
+                           </div>
+                           <div class="col-sm-2">
+                           
+                                      <div class="field form-group">
+                                            <%= label_tag "Scatt-Option Line6"  %>
+                                            <select id="option6" class="form-control"><option value="markers">ScatterPlot</option><option value="lines+markers">LineDotPlot</option><option value="dot">dot</option><option value="lines">JustLinePlot</option><option value="dashdot">dashdot</option></select>
+                                            
+                                            
+                                      </div>
+                           </div>
+                </div>
+                <div class="row">
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "Dash1"  %>
+                                            <select id="dash1" class="form-control" class="form-control"><option value="solid">Solid</option><option value="dash">Dash</option><option value="dot">dot</option><option value="dashdot">dashdot</option></select>
+                                            
+                                            
+                                      </div>
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "Dash2"  %>
+                                            <select id="dash2" class="form-control" class="form-control"><option value="solid">Solid</option><option value="dash">Dash</option><option value="dot">dot</option><option value="dashdot">dashdot</option></select>
+                                            
+                                            
+                                      </div>
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "Dash3"  %>
+                                            <select id="dash3" class="form-control"><option value="solid">Solid</option><option value="dash">Dash</option><option value="dot">dot</option><option value="dashdot">dashdot</option></select>
+                                            
+                                            
+                                      </div>  
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "Dash4"  %>
+                                            <select id="dash4" class="form-control"><option value="solid">Solid</option><option value="dash">Dash</option><option value="dot">dot</option><option value="dashdot">dashdot</option></select>
+                                            
+                                            
+                                      </div>  
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "Dash5"  %>
+                                            <select id="dash5" class="form-control"><option value="solid">Solid</option><option value="dash">Dash</option><option value="dot">dot</option><option value="dashdot">dashdot</option></select>
+                                            
+                                            
+                                      </div>  
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "Dash6"  %>
+                                            <select id="dash6" class="form-control"><option value="solid">Solid</option><option value="dash">Dash</option><option value="dot">dot</option><option value="dashdot">dashdot</option></select>
+                                            
+                                            
+                                      </div>  
+                           </div>
+                </div>
+                <div class="row">
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "LineColor1"  %>
+                                            <select id="lcolor1" class="form-control"><option value="black">black</option><option value="blue">blue</option><option value="red">red</option><option value="green">green</option><option value="orange">orange</option><option value="purple">purple</option></select>
+                                            
+                                            
+                                      </div>
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "LineColor2"  %>
+                                            <select id="lcolor2" class="form-control"><option value="black">black</option><option value="blue">blue</option><option value="red">red</option><option value="green">green</option><option value="orange">orange</option><option value="purple">purple</option></select>
+                                            
+                                      </div>
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "LineColor3"  %>
+                                            <select id="lcolor3" class="form-control"><option value="black">black</option><option value="blue">blue</option><option value="red">red</option><option value="green">green</option><option value="orange">orange</option><option value="purple">purple</option></select>
+                                            
+                                      </div>  
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "LineColor4"  %>
+                                            <select id="lcolor4" class="form-control"><option value="black">black</option><option value="blue">blue</option><option value="red">red</option><option value="green">green</option><option value="orange">orange</option><option value="purple">purple</option></select>
+                                            
+                                      </div>  
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "LineColor5"  %>
+                                            <select id="lcolor5" class="form-control"><option value="black">black</option><option value="blue">blue</option><option value="red">red</option><option value="green">green</option><option value="orange">orange</option><option value="purple">purple</option></select>
+                                            
+                                      </div>  
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "LineColor6"  %>
+                                            <select id="lcolor6" class="form-control"><option value="black">black</option><option value="blue">blue</option><option value="red">red</option><option value="green">green</option><option value="orange">orange</option><option value="purple">purple</option></select>
+                                            
+                                      </div>  
+                           </div>
+                </div>
+                <div class="row">
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "MarkerColor1"  %>
+                                            <select id="mcolor1" class="form-control"><option value="white white">white white</option><option value="black white">black white</option><option value="white black">white black</option><option value="black black">black black</option></select>
+                                            
+                                            
+                                      </div>
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "MarkerColor2"  %>
+                                            <select id="mcolor2" class="form-control"><option value="white white">white white</option><option value="black white">black white</option><option value="white black">white black</option><option value="black black">black black</option></select>
+                                            
+                                      </div>
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "MarkerColor3"  %>
+                                            <select id="mcolor3" class="form-control"><option value="white white">white white</option><option value="black white">black white</option><option value="white black">white black</option><option value="black black">black black</option></select>
+                                            
+                                      </div>  
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "MarkerColor4"  %>
+                                            <select id="mcolor4" class="form-control"><option value="white white">white white</option><option value="black white">black white</option><option value="white black">white black</option><option value="black black">black black</option></select>
+                                            
+                                      </div>  
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "MarkerColor5"  %>
+                                            <select id="mcolor5" class="form-control"><option value="white white">white white</option><option value="black white">black white</option><option value="white black">white black</option><option value="black black">black black</option></select>
+                                            
+                                      </div>  
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "MarkerColor6"  %>
+                                            <select id="mcolor6" class="form-control"><option value="white white">white white</option><option value="black white">black white</option><option value="white black">white black</option><option value="black black">black black</option></select>
+                                            
+                                      </div>  
+                           </div>
+                </div>
+                <div class="row">
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "MarkerStyle1"  %>
+                                            <select id="mstyle1" class="form-control" ><option value="dot dot">dot dot</option><option value="dot circle">dot circle-open</option><option value="circle dot">circle-open dot</option><option value="diamond diamond">diamond diamond</option><option value="square square">square square</option><option value="triangle triangle">triangle triangle</option><option value="pentagon pentagon">pentagon pentagon</option></select>
+                                            
+                                            
+                                      </div>
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "MarkerStyle2"  %>
+                                            <select id="mstyle2" class="form-control" ><option value="dot dot">dot dot</option><option value="dot circle">dot circle-open</option><option value="circle dot">circle-open dot</option><option value="diamond diamond">diamond diamond</option><option value="square square">square square</option><option value="triangle triangle">triangle triangle</option><option value="pentagon pentagon">pentagon pentagon</option></select>
+                                            
+                                            
+                                      </div>
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "MarkerStyle3"  %>
+                                            <select id="mstyle3" class="form-control"><option value="dot dot">dot dot</option><option value="dot circle">dot circle-open</option><option value="circle dot">circle-open dot</option><option value="diamond diamond">diamond diamond</option><option value="square square">square square</option><option value="triangle triangle">triangle triangle</option><option value="pentagon pentagon">pentagon pentagon</option></select>
+                                            
+                                            
+                                      </div>  
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "MarkerStyle4"  %>
+                                            <select id="mstyle4" class="form-control"><option value="dot dot">dot dot</option><option value="dot circle">dot circle-open</option><option value="circle dot">circle-open dot</option><option value="diamond diamond">diamond diamond</option><option value="square square">square square</option><option value="triangle triangle">triangle triangle</option><option value="pentagon pentagon">pentagon pentagon</option></select>
+                                            
+                                            
+                                      </div>  
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "MarkerStyle5"  %>
+                                            <select id="mstyle5" class="form-control"><option value="dot dot">dot dot</option><option value="dot circle">dot circle-open</option><option value="circle dot">circle-open dot</option><option value="diamond diamond">diamond diamond</option><option value="square square">square square</option><option value="triangle triangle">triangle triangle</option><option value="pentagon pentagon">pentagon pentagon</option></select>
+                                            
+                                            
+                                      </div>  
+                           </div>
+                           <div class="col-sm-2">
+                                      <div class="field form-group">
+                                            <%= label_tag "MarkerStyle6"  %>
+                                            <select id="mstyle6" class="form-control"><option value="dot dot">dot dot</option><option value="dot circle">dot circle-open</option><option value="circle dot">circle-open dot</option><option value="diamond diamond">diamond diamond</option><option value="square square">square square</option><option value="triangle triangle">triangle triangle</option><option value="pentagon pentagon">pentagon pentagon</option></select>
+                                            
+                                            
+                                      </div>  
+                           </div>
+                </div>
+                
+				<div class="row">					  
+                           <div class="col-sm-2">
+									   <div class="field form-group">
+									                    <%= label_tag "Trendline1"  %>
+                                                        <select id="trend1" class="form-control"><option value="no">no</option><option value="linear">Linear</option><option value="quad">Quadratic</option><option value="exp">Exponential</option></select>
+                                            
+														
+									   </div> 
+                           </div>
+                           <div class="col-sm-2">
+									   <div class="field form-group">
+													    <%= label_tag "Trendline2"  %>
+                                                        <select id="trend2" class="form-control"><option value="no">no</option><option value="linear">Linear</option><option value="quad">Quadratic</option><option value="exp">Exponential</option></select>
+                                            	
+									   </div> 
+                           </div>
+                           <div class="col-sm-2">
+									   <div class="field form-group">
+														<%= label_tag "Trendline3"  %>
+                                                        <select id="trend3" class="form-control"><option value="no">no</option><option value="linear">Linear</option><option value="quad">Quadratic</option><option value="exp">Exponential</option></select>
+                                            
+									   </div> 
+                           </div>
+                           
+                           <div class="col-sm-6">  
+								  <div class="field form-group ">
+									<%= label_tag "Description"  %>
+									<textarea id="description" class="form-control"></textarea>
+
+				                  </div>
+                           </div>
+                   </div>  
+                   
+									
+</div>
+<br>
+
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-sm-3">
+				<button onclick="MakeLinePlot()" class="btn btn-primary"  style='width:100%' >View Graph To Review</button>
+		</div>
+		
+	   <div class="col-sm-2">
+				<button id="refresh", class="btn btn-primary">Latex Refresh</button>
+		</div>
+		
+        
+    </div>
+<br>
+
+
+			<div class="row">
+						  <div class="col-sm-8">
+									<div align="left"  style="height: 644px;border: solid black;">
+									   <div align="center" id="plotly-div"></div>
+									</div>
+						  </div>
+						  <div class="col-sm-4">
+									<div align="left"   style="height: 652px;padding: 5px;">
+													<h6 id="demo"></h6>
+									</div>
+						  </div>
+			</div>
+</div>
+
+
+<br>
+
+
+
+<script>
+ $(document).on('click', '#refresh', function() {
+      if (window.MathJax) {
+
+							MathJax.Hub.Queue(
+									["Typeset",MathJax.Hub]	
+							);
+
+	  }	
+});
+
+
+
+
+
+	    var range  = [];
+	    var domain = [];
+        var range2  = [];
+	    var domain2 = [];
+	    var range3  = [];
+	    var domain3 = [];
+	    var range4  = [];
+	    var domain4 = [];
+        var range5  = [];
+	    var domain5 = [];
+	    var range6  = [];
+	    var domain6 = [];
+	    var name1 = [];
+	    var name2 = [];
+	    var name3 = [];	
+	    var name4 = [];
+	    var name5 = [];
+	    var name6 = [];	
+	    var minx = [];
+	    var maxx = [];
+	    var miny = [];
+	    var maxy = [];
+	    var xticks = [];
+	    var yticks = [];
+	    
+        var xtypeInput = document.getElementById("xtype");
+		var rangeInput  = document.getElementById("ydata1");
+		var domainInput = document.getElementById("xdata1");
+		var rangeInput2  = document.getElementById("ydata2");
+		var domainInput2 = document.getElementById("xdata2");
+		var rangeInput3  = document.getElementById("ydata3");
+		var domainInput3 = document.getElementById("xdata3");
+		var rangeInput4  = document.getElementById("ydata4");
+		var domainInput4 = document.getElementById("xdata4");
+		var rangeInput5  = document.getElementById("ydata5");
+		var domainInput5 = document.getElementById("xdata5");
+		var rangeInput6  = document.getElementById("ydata6");
+		var domainInput6 = document.getElementById("xdata6");
+		
+		var labelxInput = document.getElementById("labelx");
+		var labelyInput = document.getElementById("labely");
+		
+		var titleInput = document.getElementById("title");
+		
+		var name1Input = document.getElementById("group1");
+		var name2Input = document.getElementById("group2");
+		var name3Input = document.getElementById("group3");
+		var name4Input = document.getElementById("group4");
+		var name5Input = document.getElementById("group5");
+		var name6Input = document.getElementById("group6");
+		
+		var minxInput = document.getElementById("minx");
+        var maxxInput = document.getElementById("maxx");
+		var minyInput = document.getElementById("miny");
+        var maxyInput = document.getElementById("maxy");
+        var xticksInput = document.getElementById("xticks");
+        var yticksInput = document.getElementById("yticks");
+		var optionInput = document.getElementById("option");
+		var option2Input = document.getElementById("option2");
+		var option3Input = document.getElementById("option3");
+		var option4Input = document.getElementById("option4");
+		var option5Input = document.getElementById("option5");
+		var option6Input = document.getElementById("option6");
+		
+		var trend1Input = document.getElementById("trend1");
+		var trend2Input = document.getElementById("trend2");
+		var trend3Input = document.getElementById("trend3");
+		
+		var dash1Input = document.getElementById("dash1");
+        var dash2Input = document.getElementById("dash2");
+        var dash3Input = document.getElementById("dash3");
+        var dash4Input = document.getElementById("dash4");
+        var dash5Input = document.getElementById("dash5");
+        var dash6Input = document.getElementById("dash6");
+        
+        var mcolor1Input = document.getElementById("mcolor1");
+        var mcolor2Input = document.getElementById("mcolor2");
+        var mcolor3Input = document.getElementById("mcolor3");
+        var mcolor4Input = document.getElementById("mcolor4");
+        var mcolor5Input = document.getElementById("mcolor5");
+        var mcolor6Input = document.getElementById("mcolor6");
+        
+        var lcolor1Input = document.getElementById("lcolor1");
+        var lcolor2Input = document.getElementById("lcolor2");
+        var lcolor3Input = document.getElementById("lcolor3");
+        var lcolor4Input = document.getElementById("lcolor4");
+        var lcolor5Input = document.getElementById("lcolor5");
+        var lcolor6Input = document.getElementById("lcolor6");
+        
+        var mstyle1Input = document.getElementById("mstyle1");
+        var mstyle2Input = document.getElementById("mstyle2");
+        var mstyle3Input = document.getElementById("mstyle3");
+        var mstyle4Input = document.getElementById("mstyle4");
+        var mstyle5Input = document.getElementById("mstyle5");
+        var mstyle6Input = document.getElementById("mstyle6");
+       var descriptInput = document.getElementById("description");
+        
+function myFunction(x,y) {
+  
+   str = document.getElementById(x).value;  
+   res = str.replace(/ /g, ";");
+  document.getElementById(x).value = res;
+  
+   str2 = document.getElementById(y).value; 
+   res2 = str2.replace(/ /g, ";");
+  document.getElementById(y).value = res2;
+  
+  
+}
+
+function myFunction2(x,y) {
+  
+   str = document.getElementById(x).value;  
+   res = str.replace(/,/g, ";");
+  document.getElementById(x).value = res;
+  
+   str2 = document.getElementById(y).value; 
+   res2 = str2.replace(/,/g, ";");
+  document.getElementById(y).value = res2;
+  
+  
+}
+
+function myFunction3(x,y) {
+  
+   str = document.getElementById(x).value;  
+   res = str.replace(/,/g, "");
+  document.getElementById(x).value = res;
+  
+   str2 = document.getElementById(y).value; 
+   res2 = str2.replace(/,/g, "");
+  document.getElementById(y).value = res2;
+  
+  
+}
+
+
+
+
+
+		
+	function TrendLine(dom1,ran1,trend,dv) {
+	 
+	            var values_x = dom1.map(parseFloat);
+	            var values_y = ran1.map(parseFloat);
+	            var stretch = values_x.length;
+				var data = [];
+				var point = {};
+				for(var i=0; i<stretch-1; i++){
+					point= {x:values_x[i],y:values_y[i]};
+					data.push(point)
+				}
+				
+				if (trend == "linear")  { 
+				
+							linearRegression = d3.regressionLinear()
+							   .x(d => d.x)
+							   .y(d => d.y)
+							   .domain([0,10]);
+							 result = linearRegression(data);
+							 yint = result.b;
+							 slope = result.a;
+							 
+				             rsqr = result.rSquared;
+				             regressEq = '\\('+dv+') Y = '+slope.toFixed(2)+'x + '+yint.toFixed(2)+', R^2 = '+rsqr.toFixed(3)+' \\)';
+				             document.getElementById("regr"+dv).innerHTML = regressEq;
+				               if (window.MathJax) {
+
+										MathJax.Hub.Queue(
+												["Typeset",MathJax.Hub]	
+										);
+
+								}	
+							var min = values_x[0]-5;
+							var max = values_x[stretch-1]+5;
+							var xValues = numeric.linspace(min,max, 200);
+							var result_values_x = [];
+							var result_values_y = [];
+				          
+							for (var i = 0; i < xValues.length; i++) {
+								   x = xValues[i];
+								   y = x*slope + yint;
+					   
+								   result_values_x.push(x);
+								   result_values_y.push(y);
+					
+							};
+							  
+					} else if (trend == "quad") {
+					
+					       quadRegression = d3.regressionQuad()
+							   .x(d => d.x)
+							   .y(d => d.y)
+							var a = quadRegression(data).a;
+							var b = quadRegression(data).b;
+				            var c = quadRegression(data).c;
+				            var rsqrQuad = quadRegression(data).rSquared;
+				            document.getElementById("regr"+dv).innerHTML = '\\('+dv+') Y = '+a.toFixed(2)+'x^2 + '+b.toFixed(2)+'x + '+c.toFixed(2)+', R^2 = '+rsqrQuad.toFixed(3)+' \\)';
+				             if (window.MathJax) {
+
+										MathJax.Hub.Queue(
+												["Typeset",MathJax.Hub]	
+										);
+
+							}	
+				            
+							var min = values_x[0]-5;
+							var max = values_x[stretch-1]+5;
+							var xValues = numeric.linspace(min,max, 200);
+				
+				
+			
+							var result_values_x = [];
+							var result_values_y = [];
+				
+							for (var i = 0; i < xValues.length; i++) {
+								   x = xValues[i];
+								   y = a*x*x + b*x + c;
+					   
+								   result_values_x.push(x);
+								   result_values_y.push(y);
+					
+							};
+					
+					}  else if (trend == "exp") {
+					
+					       expRegression = d3.regressionExp()
+							   .x(d => d.x)
+							   .y(d => d.y)
+							var a2 = expRegression(data).a;
+							var b2 = expRegression(data).b;
+				            var rsqrExp = expRegression(data).rSquared;
+				            dummy = '\\('+dv+') Y = '+a2.toFixed(2)+'e^{'+b2.toFixed(2)+'x} , R^2 = '+rsqrExp.toFixed(3)+' \\)';
+				            document.getElementById("regr"+dv).innerHTML = dummy;
+				             if (window.MathJax) {
+
+										MathJax.Hub.Queue(
+												["Typeset",MathJax.Hub]	
+										);
+
+							}	
+				           
+							var min = values_x[0]-5;
+							var max = values_x[stretch-1]+5;
+							var xValues = numeric.linspace(min,max, 200);
+				
+				
+			
+							var result_values_x = [];
+							var result_values_y = [];
+				
+							for (var i = 0; i < xValues.length; i++) {
+								   x = xValues[i];
+								   y = a2*Math.pow(2.7182, b2*x);
+					   
+								   result_values_x.push(x);
+								   result_values_y.push(y);
+					
+							};
+							
+							
+					
+					}
+                   
+					
+				                
+					var trace4 = {
+				  x: result_values_x,
+				  y: result_values_y,
+				  mode: 'lines',
+				  type: 'scatter',
+				  marker: {size: 8}
+				};
+				
+								
+                Plotly.addTraces('plotly-div', trace4);
+
+				
+}	
+
+$("#regButt").click(function(){
+    $("#regr1").toggle();
+    $("#regr2").toggle();
+    $("#regr3").toggle();
+  });
+
+
+				  
+				   
+
+	
+
+	function MakeLinePlot() {
+	     xtype = (xtypeInput.value);
+	     domain = (domainInput.value).split(";");
+		 range = (rangeInput.value).split(";").map(parseFloat);
+		 domain2 = (domainInput2.value).split(";");
+		 range2 = (rangeInput2.value).split(";").map(parseFloat);
+		 domain3 = (domainInput3.value).split(";");
+		 range3 = (rangeInput3.value).split(";").map(parseFloat);
+		 domain4 = (domainInput4.value).split(";");
+		 range4 = (rangeInput4.value).split(";").map(parseFloat);
+		 domain5 = (domainInput5.value).split(";");
+		 range5 = (rangeInput5.value).split(";").map(parseFloat);
+		 domain6 = (domainInput6.value).split(";");
+		 range6 = (rangeInput6.value).split(";").map(parseFloat);
+		 labelx = (labelxInput.value);
+		 labely = (labelyInput.value);
+		 
+		 title = (titleInput.value);
+		 name1 = (name1Input.value);
+		 name2 = (name2Input.value);
+		 name3 = (name3Input.value);
+		 name4 = (name4Input.value);
+		 name5 = (name5Input.value);
+		 name6 = (name6Input.value);
+		 minx = (minxInput.value);
+		 maxx = (maxxInput.value);
+         miny = (minyInput.value);
+         maxy = (maxyInput.value);
+         xticks = (xticksInput.value);
+         yticks = (yticksInput.value);
+         option = (optionInput.value);
+         option2 = (option2Input.value);
+         option3 = (option3Input.value);
+         option4 = (option4Input.value);
+         option5 = (option5Input.value);
+         option6 = (option6Input.value);
+         dash1 = (dash1Input.value);
+         dash2 = (dash2Input.value);
+         dash3 = (dash3Input.value);
+         dash4 = (dash4Input.value);
+         dash5 = (dash5Input.value);
+         dash6 = (dash6Input.value);
+         trend1 = (trend1Input.value);
+         trend2 = (trend2Input.value);
+         trend3 = (trend3Input.value);
+         
+         mcolor1 = (mcolor1Input.value);
+         mcolor2 = (mcolor2Input.value);
+         mcolor3 = (mcolor3Input.value);
+         mcolor4 = (mcolor4Input.value);
+         mcolor5 = (mcolor5Input.value);
+         mcolor6 = (mcolor6Input.value);
+         
+         lcolor1 = (lcolor1Input.value);
+         lcolor2 = (lcolor2Input.value);
+         lcolor3 = (lcolor3Input.value);
+         lcolor4 = (lcolor4Input.value);
+         lcolor5 = (lcolor5Input.value);
+         lcolor6 = (lcolor6Input.value);
+         
+         mstyle1 = (mstyle1Input.value);
+         mstyle2 = (mstyle2Input.value);
+         mstyle3 = (mstyle3Input.value);
+         mstyle4 = (mstyle4Input.value);
+         mstyle5 = (mstyle5Input.value);
+         mstyle6 = (mstyle6Input.value);
+         
+        description = (descriptInput.value);
+        
+         mstyle1Arr = mstyle1.split(" ");
+         mstyle2Arr = mstyle2.split(" ");
+         mstyle3Arr = mstyle3.split(" ");
+         mstyle4Arr = mstyle4.split(" ");
+         mstyle5Arr = mstyle5.split(" ");
+         mstyle6Arr = mstyle6.split(" ");
+         mcolor1Arr = mcolor1.split(" ");
+         mcolor2Arr = mcolor2.split(" ");
+         mcolor3Arr = mcolor3.split(" ");
+         mcolor4Arr = mcolor4.split(" ");
+         mcolor5Arr = mcolor5.split(" ");
+         mcolor6Arr = mcolor6.split(" ");
+         
+				var trace1 = {
+		  x: domain,
+		  y: range,
+		  name: name1,
+		  mode: option,
+		  type: 'scatter',
+		  line: {dash: dash1, width: 4, color: lcolor1},
+		  marker: {size: 12,line:{width: 2}, symbol: [mstyle1Arr[0],mstyle1Arr[1]], color: [mcolor1Arr[0],mcolor1Arr[1]]}
+		  
+		};
+              var trace2 = {
+		  x: domain2,
+		  y: range2,
+		  name: name2,
+		  mode: option2,
+		  type: 'scatter',
+		  line: {dash: dash2, width: 4, color: lcolor2},
+		  marker: {size: 12,line:{width: 2}, symbol: [mstyle2Arr[0],mstyle2Arr[1]], color: [mcolor2Arr[0],mcolor2Arr[1]]}
+		  
+		};
+		
+		var trace3 = {
+		  x: domain3,
+		  y: range3,
+		  name: name3,
+		  mode: option3,
+		  type: 'scatter',
+		  line: {dash: dash3, width: 4, color: lcolor3},
+		  marker: {size: 12,line:{width: 2}, symbol: [mstyle3Arr[0],mstyle3Arr[1]], color: [mcolor3Arr[0],mcolor3Arr[1]]}
+		  
+		};
+		
+		var trace4 = {
+		  x: domain4,
+		  y: range4,
+		  name: name4,
+		  mode: option4,
+		  type: 'scatter',
+		  line: {dash: dash4, width: 4, color: lcolor4},
+		  marker: {size: 12,line:{width: 2}, symbol: [mstyle4Arr[0],mstyle4Arr[1]], color: [mcolor4Arr[0],mcolor4Arr[1]]}
+		  
+		};
+		
+		var trace5 = {
+		  x: domain5,
+		  y: range5,
+		  name: name5,
+		  mode: option5,
+		  type: 'scatter',
+		  line: {dash: dash5, width: 4, color: lcolor5},
+		  marker: {size: 12,line:{width: 2}, symbol: [mstyle5Arr[0],mstyle5Arr[1]], color: [mcolor5Arr[0],mcolor5Arr[1]]}
+		  
+		};
+		
+		var trace6 = {
+		  x: domain6,
+		  y: range6,
+		  name: name6,
+		  mode: option6,
+		  type: 'scatter',
+		  line: {dash: dash6, width: 4, color: lcolor6},
+		  marker: {size: 12,line:{width: 2}, symbol: [mstyle6Arr[0],mstyle6Arr[1]], color: [mcolor6Arr[0],mcolor6Arr[1]]}
+		  
+		};
+		
+		var layout = {
+						  title: {text: title, font: {size: 24}},
+						  
+						  height: 600,
+						  showlegend: true,
+	                          legend: {"orientation": "h",x:0,y:1.1},
+						  xaxis:{title: {text:labelx,font: {size:24}}, 
+						  			gridwidth: 2,tickfont: {size:16},
+						  		    zerolinewidth: 6, nticks: xticks, type:xtype, 
+						  		    gridcolor: 'black', range: [minx,maxx]},
+			      
+						  yaxis: {title:  {text:labely,font: {size:24}},
+						            labely, gridwidth: 2, tickfont: {size:16},
+						            zerolinewidth: 6, nticks: yticks,
+						             gridcolor: 'black', range: [miny , maxy]},
+						            
+						  
+					  
+					};
+
+
+		  var data = [trace1,trace2,trace3,trace4,trace5,trace6];
+
+		  Plotly.newPlot('plotly-div', data, layout);
+		 document.getElementById("demo").innerHTML =  'Editable Text Area ' +'<br>'+'<br>' +  '<div contenteditable="true" style="height:597px;border: solid black;">'+description+'</textarea>';
+		 
+		  if (trend1 !== "no") {TrendLine(domain,range,trend1,dv=1);}
+		  if (trend2 !== "no") {TrendLine(domain2,range2,trend2,dv=2);}
+		  if (trend3 !== "no") {TrendLine(domain3,range3,trend3,dv=3);}
+}
+		
+	
+if (window.MathJax) {
+
+		MathJax.Hub.Queue(
+				["Typeset",MathJax.Hub]	
+		);
+
+}		
+			
+
+		
+		
+</script>
+
