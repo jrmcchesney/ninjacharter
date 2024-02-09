@@ -29,9 +29,9 @@
 				<div class="col-sm-4">
 						
 							  <div class="field form-group">
-								<%= form.label :title %>
-								<%= form.text_field :title, :id=>'title',class: 'form-control', placeholder: 'Comparing Functions'%>
-							   
+								
+							     <label for="title">Title</label>
+					             <input id="title"  type="text"  class="form-control" />
 							  
 							  </div>
 						
@@ -44,62 +44,71 @@
 							  <div class="field form-group">
 								<%= form.label :header %>
 								<%= form.text_field :header,:id=>'header',class: 'form-control' , placeholder: 'X-value;Linear;Quadratic;Exponential'%>
+								<label for="title">Header</label>
+					            <input id="header"  type="text"  class="form-control" />
 							  </div>
                  </div>
                  <div class="col-sm-6">
 							  <div class="field form-group">
-								<%= form.label :values %>
-								<%= form.text_field :values,:id=>'values',class: 'form-control', placeholder: '0;1;2;3&5;8;11;14&0;1;4;9&5;15;45;135' %>
+								
+								<label for="title">Values</label>
+					            <input id="values"  type="text"  class="form-control" />
 							  </div>
 			     </div>
 		</div>
 		<div class="row">
 			     <div class="col-sm-2">
 			     			  <div class="field form-group">
-								<%= form.label :headerfont %>
-								<%= form.select :headerfont,[ ['12','12'],['14','14'],['16','16'],['18','18'],['20','20'],['22','22'],['24','24'],['32','32'] ] ,{} ,:id=>"headerfont", class: 'form-control'%>
+								
+							    <label>Headerfont</label>
+                                <select id="headerfont" class="form-control"><option value="20">20</option><option value="24">24</option><option value="32">32</option></select>
+                            
 							  </div>
 				 </div>
 				 <div class="col-sm-2">
 			     			  <div class="field form-group">
 								<%= form.label :headercolor %>
 								<%= form.select :headercolor,[['white','white'],['yellow','yellow'], ['orange','orange'],['lavender','lavender']] ,{} ,:id=>"headercolor", class: 'form-control'%>
+							    <label>Headerfont</label>
+                                <select id="headercolor" class="form-control"><option value="white">white</option><option value="lavender">Lavender</option><option value="orange">Orange</option></select>
+                            
 							  </div>
 				 </div>
 				 <div class="col-sm-2">
 			     			  <div class="field form-group">
-								<%= form.label :column1font %>
-								<%= form.select :column1font, [ ['12','12'],['14','14'],['16','16'],['18','18'],['20','20'],['22','22'],['24','24'],['32','32']],{} ,:id=>"column1font", class: 'form-control'%>
+								
+							    <label>Column1font</label>
+                                <select id="column1font" class="form-control"><option value="20">20</option><option value="24">24</option><option value="32">32</option></select>
+                            
 							  </div>
 				 </div>
 				 <div class="col-sm-2">
 			     			  <div class="field form-group">
-								<%= form.label :column1color %>
-								<%= form.select :column1color,[['white','white'],['yellow','yellow'], ['orange','orange'],['lavender','lavender']] ,{} ,:id=>"column1color", class: 'form-control'%>
+								
+							    <label>Column1color</label>
+                                <select id="column1color" class="form-control"><option value="white">white</option><option value="lavender">Lavender</option><option value="orange">Orange</option></select>
+                            
 							  </div>
 				 </div>
 				 <div class="col-sm-2">
 			     			  <div class="field form-group">
-								<%= form.label :cellsfont%>
-								<%= form.select :cellsfont,[['12','12'],['14','14'],['16','16'],['18','18'],['20','20'],['22','22'],['24','24'],['32','32']] ,{} ,:id=>"cellsfont", class: 'form-control'%>
+								
+							    <label>Cellsfont</label>
+                                <select id="cellsfont" class="form-control"><option value="20">20</option><option value="24">24</option><option value="32">32</option></select>
+                            
 							  </div>
 				 </div>
 				 <div class="col-sm-2">
 			     			  <div class="field form-group">
-								<%= form.label :cellscolor %>
-								<%= form.select :cellscolor,[['white','white'],['yellow','yellow'], ['orange','orange'],['lavender','lavender']] ,{} ,:id=>"cellscolor", class: 'form-control'%>
+								
+							     <label>Cellscolor</label>
+                                <select id="cellscolor" class="form-control"><option value="white">white</option><option value="lavender">Lavender</option><option value="orange">Orange</option></select>
+                            
 							  </div>
 				 </div>
 		</div>
 			     	
-		<div class="row">
-		         <div class="col-sm-6">
-							  <div class="field form-group">
-								<%= form.label :description %>
-								<%= form.text_area :description ,:id=>'description',class: 'form-control'%>
-							  </div>
-				  </div>
-	    </div><br>
+		
 
 		<div class="row">
 			 <div class="col-sm-6">			  
@@ -119,15 +128,7 @@
 				<button onclick="MakeTable()" class="btn btn-primary"  style='width:100%'  >View Table To Review</button>
 		</div>
 		
-	    <div class="col-sm-3">
-			<%= link_to 'Back To Tables', tables_path , class: 'btn btn-warning',  style:'width:100%' %>
-		</div>
-        <div class="col-sm-2">
-				<button id="refresh", class="btn btn-primary">Latex Refresh</button>
-			</div>
-        
-    </div>
-
+	    
 
 
 <br>
@@ -138,11 +139,7 @@
 									   <div align="center" id="plotly-div"></div>
 									</div>
 						  </div>
-						  <div class="col-sm-4">
-									<div align="left"   style="height: 650px;padding: 5px;">
-													<h6 id="demo"></h6>
-									</div>
-						  </div>
+						  
 			</div>
 </div>
 <br>
@@ -176,7 +173,7 @@
 		var valuesInput = document.getElementById("values");
 		
 		var titleInput = document.getElementById("title");
-        var descriptInput = document.getElementById("description");
+       
         var headerfontInput = document.getElementById("headerfont");
 		var headercolorInput = document.getElementById("headercolor");
 		var column1fontInput = document.getElementById("column1font");
@@ -190,7 +187,7 @@
 					  }
 					  title = (titleInput.value);
 					  header = (headerInput.value).split(';');
-					  description = (descriptInput.value);
+					 
 					  headerfont = (headerfontInput.value);
 					  headercolor = (headercolorInput.value);
 					  column1font = (column1fontInput.value);
